@@ -19,6 +19,7 @@ const useFetchData = (url: string): FetchDataResponse<BasePokeData[]> => {
       if (!nextPageUrl) {
         return;
       }
+      console.log("Made call");
       const response = await fetch(nextPageUrl);
       if (!response.ok) {
         throw new Error("Failed to fetch data");
