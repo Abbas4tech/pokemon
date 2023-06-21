@@ -1,18 +1,16 @@
-import React, { useEffect } from "react";
+import Layout from "./layout/Layout";
 
 function App() {
-  useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-      .then((res) => res.json().then((data) => console.log(data)))
-      .catch((e) => console.log(e));
-  }, []);
-
   return (
     <>
-      <header className={" h-20 bg-gray-900 text-white "}>
-        Abbas
-        <button className="btn btn-primary">Submit</button>
+      <header
+        className={
+          "h-20 md:h-24 flex justify-between px-4 items-center font-bold text-lg md:text-3xl bg-base-100 text-white "
+        }
+      >
+        <h1>PokeDex</h1>
       </header>
+      <Layout />
     </>
   );
 }
